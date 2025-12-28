@@ -1,8 +1,8 @@
 <template>
-  <ad-card class="settings-card settings-small-card">
+  <ad-card class="settings-card">
     <template #header>
       <div class="settings-card-header-container">
-        <ad-heading :tag="4" text="Charts" />
+        <ad-heading :tag="4" :text="props.heading || 'Settings'" />
 
         <ad-button
           icon="prime:refresh"
@@ -15,22 +15,29 @@
       </div>
     </template>
     <template #content>
-      <ul class="settings-card-item-list">
-        <li
-          v-for="item in displayChartList"
-          :key="item"
-          class="settings-card-item"
-        >
-          <ad-label :label="item" :for="item" />
+      <div
+        v-for="group in displayChartGroups"
+        :key="group.module"
+        class="settings-card-group"
+      >
+        <h4 class="settings-card-group-title">{{ group.module }}</h4>
+        <ul class="settings-card-item-list">
+          <li
+            v-for="item in group.items"
+            :key="item"
+            class="settings-card-item"
+          >
+            <ad-label :label="item" :for="item" />
 
-          <ad-select-button
-            ad-type="main"
-            :model-value="displayCharts[item].value ? 'On' : 'Off'"
-            :options="options"
-            @click="displayChartsStore.toggle(item)"
-          />
-        </li>
-      </ul>
+            <ad-select-button
+              ad-type="main"
+              :model-value="displayCharts[item].value ? 'On' : 'Off'"
+              :options="options"
+              @click="displayChartsStore.toggle(item)"
+            />
+          </li>
+        </ul>
+      </div>
     </template>
   </ad-card>
 </template>
@@ -39,7 +46,11 @@
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 
-import { displayChartList, useDisplayChartsStore } from 'atomic'
+import { displayChartGroups, useDisplayChartsStore } from 'atomic'
+
+const props = defineProps<{
+  heading: string
+}>()
 
 const displayChartsStore = useDisplayChartsStore()
 const displayCharts = storeToRefs(displayChartsStore)
