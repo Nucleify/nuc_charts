@@ -17,10 +17,10 @@
     <template #content>
       <div
         v-for="group in displayChartGroups"
-        :key="group.module"
+        :key="group.name"
         class="settings-card-group"
       >
-        <h4 class="settings-card-group-title">{{ group.module }}</h4>
+        <h4 class="settings-card-group-title">{{ group.name }}</h4>
         <ul class="settings-card-item-list">
           <li
             v-for="item in group.items"
