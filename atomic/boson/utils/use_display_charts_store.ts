@@ -5,7 +5,7 @@ import type {
   NucDisplayChartsStateKeyType,
 } from 'atomic'
 import {
-  displayChartList,
+  getDisplayChartList,
   initialStoreState,
   setAllStatesTo,
   toggleState,
@@ -13,7 +13,7 @@ import {
 
 export const useDisplayChartsStore = defineStore('displayCharts', {
   state: (): NucDisplayChartsStateInterface =>
-    initialStoreState(displayChartList, true),
+    initialStoreState(getDisplayChartList(), true),
   actions: {
     toggle(key: NucDisplayChartsStateKeyType): void {
       this[key] = toggleState(this[key])
