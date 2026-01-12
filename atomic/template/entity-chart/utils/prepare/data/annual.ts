@@ -41,7 +41,6 @@ export function prepareAnnualData(
       [entitiesData.articleData, dataByMonth.article],
       [entitiesData.cardData, dataByMonth.card],
       [entitiesData.contactData, dataByMonth.contact],
-      [entitiesData.documentationData, dataByMonth.documentation],
       [entitiesData.featureData, dataByMonth.feature],
       [entitiesData.fileData, dataByMonth.file],
       [entitiesData.linkData, dataByMonth.link],

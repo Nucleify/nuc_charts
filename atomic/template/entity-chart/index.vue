@@ -26,7 +26,6 @@ onMounted(() => {
     props.data?.article,
     props.data?.card,
     props.data?.contact,
-    props.data?.documentation,
     props.data?.feature,
     props.data?.file,
     props.data?.link,
@@ -39,32 +38,25 @@ onMounted(() => {
   )
   if (initialData) chartData.value = initialData
 
-  let intervalId: ReturnType<typeof setInterval> | undefined
   if (props.example) {
-    intervalId = setInterval(() => {
-      const randomizedData = setChartData(
-        props.chartMethodType,
-        props.data?.activity,
-        props.data?.article,
-        props.data?.card,
-        props.data?.contact,
-        props.data?.documentation,
-        props.data?.feature,
-        props.data?.file,
-        props.data?.link,
-        props.data?.money,
-        props.data?.question,
-        props.data?.task,
-        props.data?.technology,
-        props.data?.user,
-        true
-      )
-      if (randomizedData) chartData.value = randomizedData
-    }, 3000)
+    const randomizedData = setChartData(
+      props.chartMethodType,
+      props.data?.activity,
+      props.data?.article,
+      props.data?.card,
+      props.data?.contact,
+      props.data?.feature,
+      props.data?.file,
+      props.data?.link,
+      props.data?.money,
+      props.data?.question,
+      props.data?.task,
+      props.data?.technology,
+      props.data?.user,
+      true
+    )
+    if (randomizedData) chartData.value = randomizedData
   }
-  onUnmounted(() => {
-    if (intervalId) clearInterval(intervalId)
-  })
 })
 
 watch(
@@ -80,7 +72,6 @@ watch(
       props.data?.article,
       props.data?.card,
       props.data?.contact,
-      props.data?.documentation,
       props.data?.feature,
       props.data?.file,
       props.data?.link,

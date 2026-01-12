@@ -5,7 +5,6 @@ import type {
   NucArticleObjectInterface,
   NucCardObjectInterface,
   NucContactObjectInterface,
-  NucDocumentationObjectInterface,
   NucFeatureObjectInterface,
   NucFileObjectInterface,
   NucLinkObjectInterface,
@@ -28,7 +27,6 @@ export interface NucEntityChartDataInterface {
   article?: NucArticleObjectInterface[]
   card?: NucCardObjectInterface[]
   contact?: NucContactObjectInterface[]
-  documentation?: NucDocumentationObjectInterface[]
   feature?: NucFeatureObjectInterface[]
   file?: NucFileObjectInterface[]
   link?: NucLinkObjectInterface[]
@@ -46,7 +44,6 @@ export interface DisplayChartsInterface {
   Article: boolean
   Contact: boolean
   Card: boolean
-  Documentation: boolean
   Feature: boolean
   File: boolean
   Link: boolean
