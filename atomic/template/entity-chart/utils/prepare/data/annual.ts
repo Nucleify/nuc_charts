@@ -39,14 +39,10 @@ export function prepareAnnualData(
     ;[
       [entitiesData.activityLogData, dataByMonth.activity],
       [entitiesData.articleData, dataByMonth.article],
-      [entitiesData.cardData, dataByMonth.card],
       [entitiesData.contactData, dataByMonth.contact],
-      [entitiesData.featureData, dataByMonth.feature],
       [entitiesData.fileData, dataByMonth.file],
-      [entitiesData.linkData, dataByMonth.link],
       [entitiesData.moneyData, dataByMonth.money],
       [entitiesData.questionData, dataByMonth.question],
-      [entitiesData.taskData, dataByMonth.task],
       [entitiesData.technologyData, dataByMonth.technology],
       [entitiesData.userData, dataByMonth.user],
     ].forEach(([data, dataByMonth]) =>

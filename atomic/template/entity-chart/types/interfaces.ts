@@ -3,14 +3,10 @@ import type {
   ChartMethodType,
   NucActivityObjectInterface,
   NucArticleObjectInterface,
-  NucCardObjectInterface,
   NucContactObjectInterface,
-  NucFeatureObjectInterface,
   NucFileObjectInterface,
-  NucLinkObjectInterface,
   NucMoneyObjectInterface,
   NucQuestionObjectInterface,
-  NucTaskObjectInterface,
   NucTechnologyObjectInterface,
   NucUserObjectInterface,
 } from 'atomic'
@@ -25,14 +21,10 @@ export interface NucEntityChartInterface extends ChartInterface {
 export interface NucEntityChartDataInterface {
   activity?: NucActivityObjectInterface[]
   article?: NucArticleObjectInterface[]
-  card?: NucCardObjectInterface[]
   contact?: NucContactObjectInterface[]
-  feature?: NucFeatureObjectInterface[]
   file?: NucFileObjectInterface[]
-  link?: NucLinkObjectInterface[]
   money?: NucMoneyObjectInterface[]
   question?: NucQuestionObjectInterface[]
-  task?: NucTaskObjectInterface[]
   technology?: NucTechnologyObjectInterface[]
   user?: NucUserObjectInterface[]
 }
@@ -43,14 +35,10 @@ export interface DisplayChartsInterface {
   Admin: boolean
   Article: boolean
   Contact: boolean
-  Card: boolean
-  Feature: boolean
   File: boolean
-  Link: boolean
   Money: boolean
   Question: boolean
   Structural: boolean
-  Task: boolean
   Technology: boolean
 }
 
