@@ -1,6 +1,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
+import { ChartOptions } from 'chart.js'
 import { Ref, ref } from 'vue'
 
 import {
@@ -28,7 +29,6 @@ import {
   useColors,
 } from 'atomic'
 
-import { ChartOptions } from 'chart.js'
 import {
   cartesianChart,
   circularChart,
