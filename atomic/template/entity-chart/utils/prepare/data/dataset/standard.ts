@@ -1,4 +1,4 @@
-import type { ColorItemInterface } from 'atomic'
+import type { ColorItemInterface } from 'nucleify'
 
 export function createStandardDatasets(
   dataTypes: Array<{

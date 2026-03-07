@@ -1,7 +1,7 @@
-import * as atomic from 'atomic'
+import * as nucleify from 'nucleify'
 
 export const testCases: {
-  value: atomic.StoreStateType
+  value: nucleify.StoreStateType
   description: string
 }[] = [
   { value: true, description: 'true' },

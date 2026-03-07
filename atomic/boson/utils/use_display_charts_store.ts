@@ -3,13 +3,13 @@ import { defineStore } from 'pinia'
 import type {
   NucDisplayChartsStateInterface,
   NucDisplayChartsStateKeyType,
-} from 'atomic'
+} from 'nucleify'
 import {
   getDisplayChartList,
   initialStoreState,
   setAllStatesTo,
   toggleState,
-} from 'atomic'
+} from 'nucleify'
 
 export const useDisplayChartsStore = defineStore('displayCharts', {
   state: (): NucDisplayChartsStateInterface =>

@@ -46,7 +46,7 @@
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 
-import { displayChartGroups, useDisplayChartsStore } from 'atomic'
+import { displayChartGroups, useDisplayChartsStore } from 'nucleify'
 
 const props = defineProps<{
   heading: string

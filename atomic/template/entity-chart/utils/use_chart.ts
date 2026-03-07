@@ -27,8 +27,7 @@ import {
   ObjectType,
   UseColorsInterface,
   useColors,
-} from 'atomic'
-
+} from 'nucleify'
 import {
   cartesianChart,
   circularChart,

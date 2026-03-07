@@ -1,3 +1,3 @@
-import { displayChartList } from 'atomic'
+import { displayChartList } from 'nucleify'
 
 export type NucDisplayChartsStateKeyType = (typeof displayChartList)[number]

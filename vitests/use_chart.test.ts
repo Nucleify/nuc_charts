@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
-import * as atomic from 'atomic'
+import * as nucleify from 'nucleify'
 
 describe('useChart', (): void => {
   beforeEach((): void => {
@@ -8,7 +8,7 @@ describe('useChart', (): void => {
   })
 
   it('should return correct interface with chartData, setChartData, and setChartOptions', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
 
     expect(result).toHaveProperty('chartData')
     expect(result).toHaveProperty('setChartData')
@@ -18,7 +18,7 @@ describe('useChart', (): void => {
   })
 
   it('should set chart data for annual chart type with example data', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
 
     const chartData = result.setChartData(
       'annual',
@@ -40,12 +40,12 @@ describe('useChart', (): void => {
 
     expect(chartData).toHaveProperty('labels')
     expect(chartData).toHaveProperty('datasets')
-    expect(chartData?.labels).toEqual(atomic.months)
+    expect(chartData?.labels).toEqual(nucleify.months)
     expect(Array.isArray(chartData?.datasets)).toBe(true)
   })
 
   it('should set chart data for count chart type', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
     const mockArticleData = [
       { id: 1, created_at: '2024-01-15' },
       { id: 2, created_at: '2024-02-20' },
@@ -60,7 +60,7 @@ describe('useChart', (): void => {
   })
 
   it('should return null for invalid chart method type', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
 
     const chartData = result.setChartData('invalid')
 
@@ -68,7 +68,7 @@ describe('useChart', (): void => {
   })
 
   it('should set chart options for pie chart type', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
 
     const options = result.setChartOptions('pie')
 
@@ -79,7 +79,7 @@ describe('useChart', (): void => {
   })
 
   it('should set chart options for doughnut chart type', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
 
     const options = result.setChartOptions('doughnut')
 
@@ -90,7 +90,7 @@ describe('useChart', (): void => {
   })
 
   it('should set chart options for bar chart type', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
 
     const options = result.setChartOptions('bar')
 
@@ -103,7 +103,7 @@ describe('useChart', (): void => {
   })
 
   it('should set chart options for horizontal direction', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
 
     const options = result.setChartOptions('bar', 'horizontal')
 
@@ -111,7 +111,7 @@ describe('useChart', (): void => {
   })
 
   it('should process real data correctly for annual chart', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
     const mockArticleData = [
       { id: 1, created_at: '2024-01-15' },
       { id: 2, created_at: '2024-01-20' },
@@ -120,7 +120,7 @@ describe('useChart', (): void => {
 
     const chartData = result.setChartData('annual', undefined, mockArticleData)
 
-    expect(chartData).toHaveProperty('labels', atomic.months)
+    expect(chartData).toHaveProperty('labels', nucleify.months)
     expect(chartData?.datasets).toBeDefined()
 
     if (chartData?.datasets) {
@@ -131,7 +131,7 @@ describe('useChart', (): void => {
   })
 
   it('should process real data correctly for count chart', (): void => {
-    const result = atomic.useChart()
+    const result = nucleify.useChart()
     const mockArticleData = [
       { id: 1, created_at: '2024-01-15' },
       { id: 2, created_at: '2024-02-20' },

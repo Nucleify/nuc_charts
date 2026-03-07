@@ -1,4 +1,4 @@
-import type { NucDisplayChartsStateKeyType } from 'atomic'
+import type { NucDisplayChartsStateKeyType } from 'nucleify'
 
 export interface NucDisplayChartsStateInterface
   extends Record<NucDisplayChartsStateKeyType, boolean> {}

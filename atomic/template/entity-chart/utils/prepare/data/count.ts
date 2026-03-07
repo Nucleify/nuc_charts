@@ -1,4 +1,4 @@
-import type { EntityColorsInterface } from 'atomic'
+import type { EntityColorsInterface } from 'nucleify'
 
 export function prepareCountData(
   entitiesData: Record<string, ObjectType[]>,

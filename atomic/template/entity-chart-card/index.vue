@@ -19,8 +19,8 @@
 import type {
   NucDisplayChartsStateInterface,
   NucEntityChartCardInterface,
-} from 'atomic'
-import { useDisplayChartsStore } from 'atomic'
+} from 'nucleify'
+import { useDisplayChartsStore } from 'nucleify'
 
 const props = defineProps<NucEntityChartCardInterface>()
 

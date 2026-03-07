@@ -1,18 +1,17 @@
 import { createPinia, setActivePinia } from 'pinia'
 import { beforeEach, describe, expect, it } from 'vitest'
 
-import * as atomic from 'atomic'
-
+import * as nucleify from 'nucleify'
 import { testCases } from './cases'
 
 describe('useDisplayChartsStore > state', (): void => {
-  let store: atomic.NucDisplayChartsStateInterface
-  let keys: atomic.NucDisplayChartsStateKeyType[]
+  let store: nucleify.NucDisplayChartsStateInterface
+  let keys: nucleify.NucDisplayChartsStateKeyType[]
 
   beforeEach((): void => {
     setActivePinia(createPinia())
 
-    store = atomic.useDisplayChartsStore()
+    store = nucleify.useDisplayChartsStore()
     keys = Object.keys(store.$state)
   })
 

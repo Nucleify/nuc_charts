@@ -9,7 +9,7 @@ import type {
   NucQuestionObjectInterface,
   NucTechnologyObjectInterface,
   NucUserObjectInterface,
-} from 'atomic'
+} from 'nucleify'
 
 export interface NucEntityChartInterface extends ChartInterface {
   chartMethodType: ChartMethodType
