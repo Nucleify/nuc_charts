@@ -2,6 +2,7 @@ import { createPinia, setActivePinia } from 'pinia'
 import { beforeEach, describe, expect, it } from 'vitest'
 
 import * as nucleify from 'nucleify'
+
 import { testCases } from './cases'
 
 describe('useDisplayChartsStore > state', (): void => {
