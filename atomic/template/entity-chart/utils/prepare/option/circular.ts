@@ -1,4 +1,4 @@
-import { ChartOptions } from 'chart.js'
+import type { ChartOptions } from 'chart.js'
 
 export function circularChart(options: ChartOptions): ChartOptions {
   if (!options.plugins) options.plugins = {}

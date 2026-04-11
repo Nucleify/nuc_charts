@@ -1,4 +1,4 @@
-import { ChartOptions } from 'chart.js'
+import type { ChartOptions } from 'chart.js'
 
 export function pointerChart(
   options: ChartOptions,

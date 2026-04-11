@@ -1,6 +1,6 @@
 <template>
-  <ad-card 
-    v-if="displayCharts[props.entity as keyof NucDisplayChartsStateInterface]" 
+  <ad-card
+    v-if="displayCharts[props.entity as keyof NucDisplayChartsStateInterface]"
     class="nuc-card-base entity-chart-card"
   >
     <template #content>

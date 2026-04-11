@@ -1,13 +1,13 @@
 <template>
-	<ad-chart 
-		:data="chartData" 
-		:options="chartOptions" 
-		:type="props.type" 
-		:chart-method-type="props.chartMethodType"
-		:direction="props.direction" 
-		:class="props.chartClass" 
-		:example="props.example"
-	/>
+  <ad-chart
+    :data="chartData"
+    :options="chartOptions"
+    :type="props.type"
+    :chart-method-type="props.chartMethodType"
+    :direction="props.direction"
+    :class="props.chartClass"
+    :example="props.example"
+  />
 </template>
 
 <script setup lang="ts">
