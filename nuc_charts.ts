@@ -4,7 +4,7 @@ import {
   NucChartSettingsCard,
   NucEntityChart,
   NucEntityChartCard,
-} from './atomic'
+} from 'nucleify'
 
 export function registerNucCharts(app: App<Element>): void {
   app
