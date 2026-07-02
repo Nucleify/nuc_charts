@@ -37,7 +37,7 @@ export function NucChartSettingsCard({
               <li key={item} className="settings-card-item">
                 <AdLabel label={item} forInput={item} />
                 <AdSelectButton
-                  adType="main"
+                  nuiType="main"
                   value={
                     displayChartsStore[item as NucDisplayChartsStateKeyType]
                       ? 'On'

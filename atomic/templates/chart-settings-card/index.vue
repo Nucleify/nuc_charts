@@ -6,7 +6,7 @@
 
         <ad-button
           icon="prime:refresh"
-          ad-type="main"
+          nui-type="main"
           class="refresh-button"
           rounded
           text
@@ -30,7 +30,7 @@
             <ad-label :label="item" :for="item" />
 
             <ad-select-button
-              ad-type="main"
+              nui-type="main"
               :model-value="displayCharts[item].value ? 'On' : 'Off'"
               :options="options"
               @click="displayChartsStore.toggle(item)"
