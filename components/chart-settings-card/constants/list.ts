@@ -1,6 +1,6 @@
 import type { SettingsGroupInterface } from 'nucleify'
 
-import { modulesGroups } from '../../../../../nuc_settings/constants/modules'
+import { modulesGroups } from '../../../../nuc_settings/constants/modules'
 
 export function getDisplayChartGroups(): SettingsGroupInterface[] {
   return [
